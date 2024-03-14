@@ -35,6 +35,6 @@ jobs:
         APPID: ${{ secrets.APPID }}
         APPSECRET: ${{ secrets.APPSECRET }}
         USERID: ${{ secrets.USERID }}
-        STEP_T_ID: ${{ secrets.STEP_TID }}
-        step_user: ${{ secrets.STEP_USER }}
-        step_password: ${{ secrets.STEP_PASSWORD }}
+        STEP_TID: ${{ secrets.STEP_TID }}
+        STEP_USER: ${{ secrets.STEP_USER }}
+        STEP_PASSWORD: ${{ secrets.STEP_PASSWORD }}

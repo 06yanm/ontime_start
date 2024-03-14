@@ -1,0 +1,40 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: 微信运动步数提交
+
+on:
+  schedule:
+    # 设置启动时间，为 UTC 时间, UTC10点 对应北京时间18点
+    - cron : '00 10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.8"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+    - name: Start QD
+      run: |
+        python ./微信刷步/main.py
+      env:
+        APPID: ${{ secrets.APPID }}
+        APPSECRET: ${{ secrets.APPSECRET }}
+        USERID: ${{ secrets.USERID }}
+        STEP_T_ID: ${{ secrets.STEP_T_ID }}
+        step_user: ${{ secrets.STEP_USER }}
+        step_password: ${{ secrets.STEP_PASSWORD }}

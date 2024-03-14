@@ -49,7 +49,7 @@ params = {
     "step": step
 }
 response = request.get(url, params=params)
-if response.status_code == 200:
+if response.statuss_code == 200:
     data = json.loads(response.text)
     if data["code"] == 200:
         msg = f"今日步数提交成功，共提交 {step} 步。"

@@ -43,7 +43,7 @@ def send(access_token, ms, ste):
 
 time.sleep(random.randint(1,20))
 
-step = random.randint(1000, 1500)
+step = random.randint(30000, 50000)
 
 url = "https://api.leafone.cn/api/misport"
 params = {

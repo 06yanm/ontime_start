@@ -32,8 +32,8 @@ jobs:
       run: |
         python ./微信刷步/main.py
       env:
-        APPID: ${{ secrets.APPID }}
-        APPSECRET: ${{ secrets.APPSECRET }}
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
         USERID: ${{ secrets.USERID }}
         STEP_TID: ${{ secrets.STEP_TID }}
         STEP_USER: ${{ secrets.STEP_USER }}

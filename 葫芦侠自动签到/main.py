@@ -69,7 +69,7 @@ def send(access_token, name, level, nowexp, nextexp):
     body = {
         "touser": userId.strip(),
         "template_id": template_id,
-        "url": "https://floor.huluxia.com/view/level?viewUserID=" + hlx_user_id + "&_key=" + key + "&theme=0",
+        # "url": "https://floor.huluxia.com/view/level?viewUserID=" + hlx_user_id + "&_key=" + key + "&theme=0",
         "data": {
             "name": {
                 "value": name
@@ -120,7 +120,7 @@ for cat_id in cat_ids:
     response = requests.post(url=url, data=data, headers=headers)
     response.encoding = "utf-8"
     print(response.text)
-    time.sleep(random.randint(5, 20))
+    time.sleep(random.randint(2, 5))
 
 name, level, nowexp, nextexp = get_info(hlx_user_id, key)
 send(get_access_token(), name, level, nowexp, nextexp)

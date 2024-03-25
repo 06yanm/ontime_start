@@ -69,7 +69,7 @@ def send(access_token, name, level, nowexp, nextexp):
     body = {
         "touser": userId.strip(),
         "template_id": template_id,
-        # "url": "https://floor.huluxia.com/view/level?viewUserID=" + hlx_user_id + "&_key=" + key + "&theme=0",
+        "url": "https://floor.huluxia.com/view/level?viewUserID=" + hlx_user_id + "&_key=" + key + "&theme=0",
         "data": {
             "name": {
                 "value": name

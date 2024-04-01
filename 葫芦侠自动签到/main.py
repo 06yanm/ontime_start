@@ -115,7 +115,8 @@ for cat_id in cat_ids:
         "hlx_android_id": "57262aa2edceb4d0",
         "hlx_oaid": "36280b480ea3a9f0",
         "cat_id": str(cat_id),
-        "time": str(n_time)
+        "time": str(n_time),
+        "_key": key
     }
     response = requests.post(url=url, data=data, headers=headers)
     response.encoding = "utf-8"

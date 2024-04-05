@@ -6,7 +6,7 @@ name: 葫芦侠自动签到
 on:
   schedule:
     # 设置启动时间，为 UTC 时间, UTC0点 对应北京时间8点
-    - cron : '00 00 * * *'
+    - cron : '00 22 * * *'
   workflow_dispatch:
 
 permissions:

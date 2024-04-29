@@ -64,14 +64,15 @@ def taskCompleted(authorization, clientid):
         print(f"广告观看结果:{msg}----->>当前已观看广告{completed}个广告")
         delay = random.randint(60, 65)
         time.sleep(delay)
-if __name__ == "__main__":
-    sww_list = sww.split('@')
-    n = 0
-    for num, sww_item in enumerate(sww_list, start=1):
-        authorization, clientid = sww_item.split('&')
-        print(f"=====开始执行第{num}个账号任务=====")
-        print("---------开始执行十个广告任务---------")
-        taskCompleted(authorization, clientid)
-        n +=1
-    acc = get_access_token()
-    send(acc,n)
+
+    
+sww_list = sww.split('@')
+n = 0
+for num, sww_item in enumerate(sww_list, start=1):
+    authorization, clientid = sww_item.split('&')
+    print(f"=====开始执行第{num}个账号任务=====")
+    print("---------开始执行十个广告任务---------")
+    taskCompleted(authorization, clientid)
+    n +=1
+acc = get_access_token()
+send(acc,n)

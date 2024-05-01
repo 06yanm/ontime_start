@@ -65,5 +65,5 @@ for i in fail_list:
      o+=1
   
 # print(o, fail_list)                   
-send(o, fail_list.join(","))
+send(o, ",".join(fail_list))
 
